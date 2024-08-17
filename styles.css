@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .canvas {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pencil {
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    animation: jump 1s infinite ease-in-out; /* Initially paused */
+  }
+  
+  /* Jumping animation */
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
